@@ -1,11 +1,7 @@
 import client from "../client.ts";
 import server from "../server.ts";
-import { Body, Mover, Pose } from "../game.ts";
 import { bus, TICK_RATE, world } from "./shim-core.ts";
-import { registry } from "./shim-replicate-client.ts";
 import { startServer } from "./shim-server.ts";
-
-registry.pose = Pose; registry.mover = Mover; registry.body = Body;
 
 const element = document.getElementById("game") as HTMLElement;
 const abort = new AbortController();
